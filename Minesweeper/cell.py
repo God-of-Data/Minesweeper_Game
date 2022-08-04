@@ -12,7 +12,7 @@ class Cell:
     RIGHT_MOUSE_CLICK_TKINTER_FLAG = "<Button-1>"
 
 
-    all_cells_container = []
+    cell_container = []
 
 
     def __init__(self,row_index,col_index):
@@ -94,14 +94,14 @@ class Cell:
     @staticmethod
     def add_cell_to_cell_container(cell):
 
-        Cell.all_cells_container.append(cell)
+        Cell.cell_container.append(cell)
     
     
     @staticmethod
     def randomize_mines_in_all_cells(mines_amount):
 
 
-        randomly_picked_cells = random.sample(Cell.all_cells_container, mines_amount)
+        randomly_picked_cells = random.sample(Cell.cell_container, mines_amount)
 
 
         for cell in randomly_picked_cells:
