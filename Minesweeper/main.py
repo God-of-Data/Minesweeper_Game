@@ -5,34 +5,34 @@ from cell import Cell
 import gameboard_settings as sets
 
 
-root_frame_size_str = f'{sets.BOARD_WIDTH}x{sets.BOARD_HEIGHT}'
+formatted_root_frame_size_str = f'{sets.BOARD_WIDTH}x{sets.BOARD_HEIGHT}'
 
 
-root = Tk()
+root_frame = Tk()
 
 
-root.title(sets.BOARD_TITLE)
-root.resizable(width = False,height = False)
-root.configure(bg = sets.BOARD_BACKGROUND_COLOR)
-root.geometry(root_frame_size_str)
+root_frame.title(sets.BOARD_TITLE)
+root_frame.resizable(width = False,height = False)
+root_frame.configure(bg = sets.BOARD_BACKGROUND_COLOR)
+root_frame.geometry(formatted_root_frame_size_str)
 
 
 top_frame = Frame(
-                    master = root, 
+                    master = root_frame, 
                     bg     = sets.TOP_FRAME_BACKGROUND_COLOR, 
                     width  = sets.TOP_FRAME_WIDTH, 
                     height = sets.TOP_FRAME_HEIGHT
                  )
 
 left_frame = Frame(
-                    master = root, 
+                    master = root_frame, 
                     bg     = sets.LEFT_FRAME_BACKGROUND_COLOR, 
                     width  = sets.LEFT_FRAME_WIDTH, 
                     height = sets.LEFT_FRAME_HEIGHT
                   )
 
 center_frame = Frame(
-                        master = root, 
+                        master = root_frame, 
                         bg     = sets.CENTER_FRAME_BACKGROUND_COLOR, 
                         width  = sets.CENTER_FRAME_WIDTH, 
                         height = sets.CENTER_FRAME_HEIGHT
@@ -70,4 +70,4 @@ for col_index in range(sets.GRID_SIZE):
 Cell.randomize_mines_in_all_cells(sets.MINES_AMOUNT)
 
 
-root.mainloop()
+root_frame.mainloop()

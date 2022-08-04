@@ -83,12 +83,12 @@ class Cell:
 
     def activate_left_click_actions(self, event):
                 
-        print(event)
+        pass
 
 
     def activate_right_click_actions(self, event):
 
-        print(event)
+        pass
 
 
     @staticmethod
@@ -113,5 +113,7 @@ class Cell:
 
 
     def __repr__(self) -> str:
+
+        formatted_object_str = f"Cell({self.get_col_index()},{self.get_row_index()})"
         
-        return f"Cell({self.get_col_index()},{self.get_row_index()})"
+        return formatted_object_str
