@@ -90,6 +90,12 @@ class Cell:
 
         print(event)
 
+
+    @staticmethod
+    def add_cell_to_cell_container(cell):
+
+        Cell.all_cells_container.append(cell)
+    
     
     @staticmethod
     def randomize_mines_in_all_cells(mines_amount):
@@ -104,12 +110,6 @@ class Cell:
         
 
         print(randomly_picked_cells)
-
-
-    @staticmethod
-    def add_cell_to_cell_container(cell):
-
-        Cell.all_cells_container.append(cell)
 
 
     def __repr__(self) -> str:
