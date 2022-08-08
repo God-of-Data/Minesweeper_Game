@@ -1,0 +1,18 @@
+
+import settings.game_settings as sets
+
+
+CELL_QUANTITY        = sets.CELL_QUANTITY
+MINED_CELLS_QUANTITY = sets.MINE_QUANTITY
+
+MINED_CELL_COLOR      = "red"
+INITIAL_CELL_COLOR    = "beige"
+CLICKED_BUTTON_COLOR  = "gray"
+SUSPICIOUS_CELL_COLOR = "orange"
+
+MINED_CELL_TEXT      = "X"
+INITIAL_CELL_TEXT    = ""
+SUSPICIOUS_CELL_TEXT = "?"
+
+BUTTON_WIDTH  = 6
+BUTTON_HEIGHT = 2
