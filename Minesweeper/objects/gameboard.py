@@ -19,8 +19,8 @@ def create_gameboard_root_frame(title: str, background_color: str, size_string: 
 
 def create_gameboard_frame(master_object, 
                            background_color: str, 
-                           width:            int, 
-                           height:           int) -> Frame:
+                           width:            float, 
+                           height:           float) -> Frame:
 
    temp_frame = Frame(
                         master = master_object, 

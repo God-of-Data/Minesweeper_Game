@@ -6,7 +6,7 @@ from tkinter import messagebox
 import settings.game_settings as sets
 
 
-def calculate_size_by_precentage(size: int, prcnt: int) -> int:
+def calculate_size_by_precentage(size: float, prcnt: float) -> float:
 
     size_portion = (prcnt / 100) * size
 
